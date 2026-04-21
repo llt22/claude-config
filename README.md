@@ -25,7 +25,8 @@ claude-config/
 │   ├── skills/                # 自定义 skill
 │   │   ├── code-review/       # 结构化代码审查
 │   │   └── systematic-debugging/  # 系统化调试流程
-│   └── projects/              # 项目级 memory（按项目目录分组）
+│   └── projects/              # 项目级 memory（gitignore 排除，仅本地同步）
+│       └── .example-project/  # 示例 memory 格式
 ├── agents/
 │   └── skills/                # 社区 skill（tavily 系列等）
 ├── sync.sh                    # 同步脚本
@@ -38,7 +39,7 @@ claude-config/
 
 1. Fork 或用本仓库做模板，创建你自己的私有仓库
 2. 按需修改 `claude/CLAUDE.md`（全局提示词）和 `claude/settings.json`（全局配置）
-3. 删除 `claude/projects/` 下的示例 memory
+3. 项目级 memory 已被 gitignore 排除，`sync.sh push/pull` 仍会在本地同步
 
 ### 在新设备上安装
 
